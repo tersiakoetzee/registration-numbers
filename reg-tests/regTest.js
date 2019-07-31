@@ -16,25 +16,25 @@ describe("The set town registration", function () {
     it("should not be able to add CL as a reg number", function () {
         let regFactory = RegNumbers();
         
-        regFactory.addTownReg("ca 12345");
-        regFactory.addTownReg("ya 45678");
-        regFactory.addTownReg("cl 45678");
+        regFactory.setTownReg("ca 12345");
+        regFactory.setTownReg("ya 45678");
+        regFactory.setTownReg("cl 45678");
 
-        assert.deepEqual( ["ca 12345", "cy 45678" ], regFactory.getAllRegNumbers())
+        assert.deepEqual( ["ca 12345", "cy 45678" ], regFactory.filterForTownRegNumbers())
  
 
     });
 
     describe("Filter for all the towns registration", function () {
 
-        it("should filter current registrations to see if registrations start with a town and return filtered list", function () {
+        it("should filter current registrations to see if registrations start with a towns location", function () {
             let regFactory = RegNumbers();
             
             regFactory.getAllRegNumbers("CY 12345");
             regFactory.getAllRegNumbers("CA 45678");
            
     
-            assert.deepEqual(["CY 12345"],regFactory.filterForTownRegNumbers())
+            assert.deepEqual(regFactory.filterForTownRegNumbers(["CY 12345"]))
     
         })
         })
