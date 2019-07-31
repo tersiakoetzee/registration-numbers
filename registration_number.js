@@ -10,13 +10,13 @@ function RegNumbers() {
         return regList;
     }
 //filter the registration by town 
-    function filterForTownRegNumbers(regStart) {
+    function filterForTownRegNumbers(loc) {
         var filteredList = []
         for (var i = 0; i < regList.length; i++) {
             var currentRegNumber = regList[i];
 
-            if (currentRegNumber.startsWith(regStart)) {
-                filteredList.push(town);
+            if (currentRegNumber.startsWith(loc)) {
+                filteredList.push(currentRegNumber);
             }
         }
         return filteredList;
