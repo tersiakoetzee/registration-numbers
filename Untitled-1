@@ -1,0 +1,12 @@
+
+
+
+var filteredList = []
+
+// loop over the unfiltered filteredList
+    // get the current entry in the filteredList
+    // check if this value starts with the required string
+    //if it does add it to filteredList
+    // if not do nothing
+
+return filteredList;

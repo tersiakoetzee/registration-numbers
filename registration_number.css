@@ -1,0 +1,31 @@
+
+body{
+    background-image:url(ice.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+h2{
+    display: flex;
+    justify-content: center;   
+}
+.col-12{
+    display: flex;
+    justify-content: center;
+}
+.regInput{
+    justify-content: center;
+    border-radius:1em;
+    width:160px;
+}
+li{
+   display: hidden;
+   border-radius: 3px;
+   background: yellow;
+   border: solid black 0.5px;
+}
+button{ 
+    justify-content: center;
+    margin: auto;
+   
+}
