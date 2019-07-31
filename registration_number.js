@@ -9,7 +9,7 @@ function RegNumbers() {
     function getAllRegNumbers() {
         return regList;
     }
-
+//filter the registration by town 
     function filterForTownRegNumbers(regStart) {
         var filteredList = []
         for (var i = 0; i < regList.length; i++) {
