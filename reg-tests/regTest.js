@@ -17,7 +17,7 @@ describe("The set town registration", function () {
         let regFactory = RegNumbers();
         
         regFactory.setTownReg("ca 12345");
-        regFactory.setTownReg("ya 45678");
+        regFactory.setTownReg("ya 45678");////git
         regFactory.setTownReg("cl 45678");
 
         assert.deepEqual( ["ca 12345", "cy 45678" ], regFactory.filterForTownRegNumbers())
