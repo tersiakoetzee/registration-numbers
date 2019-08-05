@@ -1,34 +1,40 @@
 var addBtnElem = document.querySelector(".clicked");
-var showBtnElem = document.querySelector(".clicked");
+var showBtnElem = document.querySelector(".filter");
 var textElem = document.querySelector("#text");
-var displayplate = document.querySelector("#display");
+var displayPlate = document.querySelector(".displayPlate");
+var entry  = document.querySelector(".entry");
+var radiobut = document.querySelector(".townReg")
 var regFactory = RegNumbers();
 
 
 
 function regEntry() {
-    // if (textElem.value != undefined && textElem.value.trim() != "") {
-    //     var ul = document.getElementById("display");
-    //     regEntry.setTownReg(regInput.value);
+    regFactory.setTownReg(entry.value)
+    
 
-    //     let regnums = regEntry.getAllRegNumbers();
-    //     document.getElementById(display).innerHTML = ""
+    entry.value = "";
+    var regInput = document.createElement("div");
+    var newPlate = document.createTextNode(regFactory.getAllRegNumbers());
 
-    //     for (let i = 0; i < regnums.length; i++) {
-
-    //         regPlate(regnums[i]);
-    //     }
-
-    var regInput = document.getElementById("regInput");
-    var li = document.createElement("li");
-    li.setAttribute("id", regInput.value);
-    regFactory.setTownReg(regInput.value);
-    li.appendChild(document.createTextNode(regFactory.getAllRegNumbers()));
-    ul.appendChild(li);
+    regInput.appendChild(newPlate);
+    regInput.setAttribute("class", "displayPlate");
+    displayPlate.appendChild(regInput);
 }
 
+function townSelector(){
+   
+    var radiobut = document.querySelector("input[name = radiobut]:checked");
+
+    
+    displayPlate.innerHTML = regFactory.filterForTownRegNumbers(radiobut.value);
+   
+    }
+   
+ 
 
 
 
-// addBtnElem.addEventListener("click", regEntry)
-// showBtnElem.addEventListener("click", )
+
+
+addBtnElem.addEventListener("click", regEntry);
+showBtnElem.addEventListener("click",  townSelector);

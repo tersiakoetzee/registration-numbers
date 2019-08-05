@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-12">
 
-            <input type="text" id="regInput" name="regNum" value="">
+            <input type="text" id="text" class="entry" name="regNum" value="" maxlength="8" >
 
         </div>
     </div>
@@ -30,17 +30,17 @@
 
     <div class="row">
         <div class="col-12">
-            <div class="radioTown">
+            <div id="radioTown">
                 <span>
-                    <input type="radio" name="radiobut" value="CK" class="Town" id="town">
+                    <input class="townReg" type="radio" name="radiobut" value="CK" class="Town" id="town"  >
                     Malmesbury
                 </span>
                 <span>
-                    <input type="radio" name="radiobut" value="CY" class="Town">
+                    <input class="townReg" type="radio" name="radiobut" value="CY" class="Town" id="town" >
                     Bellville
                 </span>
                 <span>
-                    <input type="radio" name="radiobut" value="CA" class="Town">
+                    <input class="townReg" type="radio" name="radiobut" value="CA" class="Town" id="town">
                     Cape Town
                 </span>
             </div>
@@ -49,13 +49,13 @@
 
     <div class="row">
         <div class="col-12">
-            <button type="button" onclick="showTown" class="clicked" name="showBtn" value="">Show</button>
+            <button type="button"  class="filter" name="showBtn" value="">Show</button>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12">
-            <ul id="display" style="list-style:none"></ul>
+            <ul class="displayPlate" id="display" ></ul>
         </div>
     </div>
 </body>

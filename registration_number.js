@@ -1,43 +1,47 @@
 function RegNumbers() {
-    var regList = [];
 
+    let regMap = [];
+    let storeReg;
 
+    // let getting;
     function setTownReg(reg) {
+        if (reg) {
+            storeReg = reg;
+        }
+        regMap[storeReg] == undefined ? regMap[storeReg] = 0 : 0;
 
-        regList.push(reg);
     }
+
+
     function getAllRegNumbers() {
-        return regList;
+        console.log(regMap);
+        return Object.keys(regMap);
     }
-//filter the registration by town 
-    function filterForTownRegNumbers(loc) {
-        var filteredList = []
-        for (var i = 0; i < regList.length; i++) {
-            var currentRegNumber = regList[i];
 
+    function filterForTownRegNumbers(registration, loc) {
+        if (registration.length < 1) {
+            registration = getAllRegNumbers();
+        }
+        var filteredList = []
+        for (var i = 0; i < registration.length; i++) {
+            var currentRegNumber = registration[i];
             if (currentRegNumber.startsWith(loc)) {
                 filteredList.push(currentRegNumber);
             }
-        }
-        return filteredList;
+            console.log(filteredList);
+        } return filteredList;
+
+
     }
 
-    
-    function townFilter() {
-       
-        // for (var i = 0; i < regList.length; i++) {
-        //     if (regNum[i].startsWith(town)) {
-        //         regList[filteredList[i]] = 0;
-        //     }
-        // }
-        return filteredList
-    }
+
 
     return {
         setTownReg,
         getAllRegNumbers,
-        filterForTownRegNumbers,
-        townFilter
+        filterForTownRegNumbers
+
+
     }
 
 

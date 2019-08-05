@@ -18,14 +18,16 @@ h2{
     border-radius:1em;
     width:160px;
 }
-li{
-   display: hidden;
-   border-radius: 3px;
-   background: yellow;
-   border: solid black 0.5px;
-}
+
 button{ 
     justify-content: center;
     margin: auto;
    
+}
+.displayPlate  {
+   display: inline-table;
+   
+   border-radius: 3px;
+   background: yellow;
+   border: solid black 0.5px;
 }
