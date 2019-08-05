@@ -1,6 +1,6 @@
 
 body{
-    background-image:url(ice.jpg);
+    background-image:url(../assets/ice.jpg);
     background-repeat: no-repeat;
     background-size: cover;
    
@@ -24,10 +24,11 @@ button{
     margin: auto;
    
 }
-.displayPlate  {
-   display: inline-table;
-   
-   border-radius: 3px;
-   background: yellow;
-   border: solid black 0.5px;
+.regPlate {
+
+    border: solid black 1px;
+    border-radius: 0.5em;
+    background-color: yellow;
+    list-style: none;
+
 }

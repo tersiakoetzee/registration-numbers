@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="registration_number.css">
-    <link rel="stylesheet" href="grid.css">
-
-    <title></title>
+    <link rel="stylesheet" href="css/registration_number.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <title>Reg Numbers</title>
 </head>
 
 <body>
@@ -16,9 +15,9 @@
 
     <div class="row">
         <div class="col-12">
-
-            <input type="text" id="text" class="entry" name="regNum" value="" maxlength="8" >
-
+           
+            <input type="text" id="text" class="entry" name="regNum" value=""  maxlength="">
+           
         </div>
     </div>
 
@@ -32,11 +31,11 @@
         <div class="col-12">
             <div id="radioTown">
                 <span>
-                    <input class="townReg" type="radio" name="radiobut" value="CK" class="Town" id="town"  >
+                    <input class="townReg" type="radio" name="radiobut" value="CK" class="Town" id="town">
                     Malmesbury
                 </span>
                 <span>
-                    <input class="townReg" type="radio" name="radiobut" value="CY" class="Town" id="town" >
+                    <input class="townReg" type="radio" name="radiobut" value="CY" class="Town" id="town">
                     Bellville
                 </span>
                 <span>
@@ -49,7 +48,7 @@
 
     <div class="row">
         <div class="col-12">
-            <button type="button"  class="filter" name="showBtn" value="">Show</button>
+            <button type="button" class="filter" name="showBtn" value="">Show</button>
         </div>
     </div>
 
@@ -59,7 +58,8 @@
         </div>
     </div>
 </body>
-<script src="registration_number.js" charset="utf-8"></script>
-<script src="registration_dom.js" charset="utf-8"></script>
+
+<script src="./js/registration_number.js" charset="utf-8"></script>
+<script src="./js/registration_dom.js" charset="utf-8"></script>
 
 </html>
