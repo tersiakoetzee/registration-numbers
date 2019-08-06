@@ -1,13 +1,14 @@
 
 body{
-    background-image:url(../assets/ice.jpg);
+    background-image:url(../assets/road.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
    
 }
 h2{
     display: flex;
-    justify-content: center;   
+    justify-content: center; 
+    color: black;  
 }
 .col-12{
     display: flex;
@@ -22,6 +23,7 @@ h2{
 button{ 
     justify-content: center;
     margin: auto;
+    color: black;
    
 }
 .regPlate {
@@ -31,4 +33,16 @@ button{
     background-color: yellow;
     list-style: none;
 
+}
+.error{
+    font-size: 2em;
+    color: firebrick;
+}
+.error2{
+    font-size: 2em;
+    color: firebrick;
+}
+span{
+    font-size: 2em;
+    color: black;
 }
