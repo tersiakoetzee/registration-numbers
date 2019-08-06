@@ -1,8 +1,8 @@
 
-describe("The set town registration", function () {
+describe("The registration factory", function () {
 
     it("should set the registration entered ", function () {
-        let regFactory = RegNumbers();
+        var regFactory = RegNumbers();
 
         regFactory.setTownReg("CY 12345");
         regFactory.setTownReg("CA 45678");
@@ -19,23 +19,35 @@ describe("The set town registration", function () {
         regFactory.setTownReg("cl 45678");
         regFactory.setTownReg("cl 45678");
 
-        assert.deepEqual(["cl 45678"], regFactory.getAllRegNumbers())
+        assert.deepEqual(["CL 45678"], regFactory.getAllRegNumbers())
 
 
     });
 
-    it("It should return all registrations from Cape Town", () => {
+    it("It should return all registrations from Cape Town", function (){
 
         let regFactory = RegNumbers();
 
         regFactory.setTownReg("CA 123 456");
-        regFactory.setTownReg("CA 324 567");
+        regFactory.setTownReg("ca 324 567");
         regFactory.setTownReg("CY 123 243");
         regFactory.setTownReg("CL 123 456");
 
-        let getReg = regFactory.getAllRegNumbers();
-        assert.deepEqual(['CA 123 456', 'CA 324 567'], regFactory.filterForTownRegNumbers(getReg, 'CA'));
+        assert.deepEqual(['CA 123 456', 'CA 324 567'], regFactory.filterForTownRegNumbers('CA'));
     })
+
+    it("It should return me an error message when no reg number added", function (){
+
+        let regFactory = RegNumbers();
+
+        regFactory.setTownReg();
+        regFactory.setTownReg("");
+        
+       
+
+        assert.equal( regFactory.setTownReg("Please Enter a Valid Registration Number"));
+    })
+    
 
   
 }) 
