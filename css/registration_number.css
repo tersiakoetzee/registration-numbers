@@ -34,6 +34,8 @@ button{
     background-color: yellow;
     list-style: none;
     font-size: 1.5em;
+    float: left;
+    margin: 5px;
 
 }
 .error{
