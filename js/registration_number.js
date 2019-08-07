@@ -5,7 +5,6 @@ function RegNumbers() {
     function setTownReg(reg) {
         var rex = /^[A-Za-z]{2}\s[0-9]{3}\s[0-9]{3}/;
         let test2 = rex.test(reg);
-
         console.log(test2);
 
 
