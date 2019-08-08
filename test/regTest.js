@@ -34,7 +34,16 @@ describe("The registration factory", function () {
         regFactory.setTownReg("CL 123 456");
 
         assert.deepEqual(['CA 123 456', 'CA 324 567'], regFactory.filterForTownRegNumbers('CA'));
-    })
+    });
+
+    it("It should be able to initialize with a list of registration numbers", function (){
+
+        let regFactory = RegNumbers(["CA 123 456", "CL 123 456"]);
+
+        assert.deepEqual(['CA 123 456','CL 123 456'], regFactory.getAllRegNumbers());
+    });
+
+    
 
     it("It should return me an error message when no reg number added", function (){
 
