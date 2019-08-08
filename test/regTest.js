@@ -54,7 +54,7 @@ describe("The registration factory", function () {
         
        
 
-        assert.equal( regFactory.setTownReg("Please Enter A Valid Registration And Select A Town"));
+        assert.equal([], regFactory.setTownReg("Please Enter A Valid Registration And Select A Town"));
     })
     
 
