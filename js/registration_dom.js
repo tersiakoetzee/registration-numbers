@@ -68,7 +68,7 @@ function getValuesFromLocalStorage() {
     }
     return [];
 }
-
+// test status
 
 window.onload = function () {
     var keys = getValuesFromLocalStorage();
