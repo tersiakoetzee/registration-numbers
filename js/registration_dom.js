@@ -76,6 +76,7 @@ window.onload = function () {
 }
 
 function reset() {
+    location.reload();
     localStorage.clear();
     displayPlate.innerHTML = "";
 }
