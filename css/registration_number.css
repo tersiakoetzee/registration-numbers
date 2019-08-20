@@ -40,12 +40,32 @@ button{
 
 }
 .error{
-    font-size: 2em;
+    font-size: 1em;
     color: firebrick;
+}
+.errorTem{
+    font-size: 1em;
+    color: firebrick;  
 }
 
 
 span{
-    font-size: 2em;
+    font-size: 1.5em;
     color: black;
+}
+.col-6{
+    float: left;
+}
+.PlateTem{
+    justify-content: center;
+    margin-right: 2em;
+    border: solid black 1.5px;
+    border-radius: 0.5em;
+    background-color: yellow;
+    padding: 2px;
+    list-style: none;
+    font-size: 1.5em;
+    float: left;
+    margin: 5px; 
+     
 }
