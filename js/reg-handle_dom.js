@@ -29,7 +29,7 @@ function regTemp() {
 
         var hbStored = regTemFactory.getAllRegNumbers();
         localStorage.setItem("Hb", JSON.stringify(regTemFactory.getAllRegNumbers(hbStored)));
-        displayPlateHb.innerHTML = userTemplate7({ registrationList: [hbStored] });
+        displayPlateHb.innerHTML = userTemplate7({ registrationList: hbStored });
     } else {
 
         errorHb.innerHTML = regTemFactory.errorReg();
@@ -56,6 +56,10 @@ function handleStorage(){
         return registerHb;
     }
     return [];
+}
+const func = (reg) =>{
+    let plateumber = {plate: reg}
+
 }
 
 window.addEventListener('load', function() {
