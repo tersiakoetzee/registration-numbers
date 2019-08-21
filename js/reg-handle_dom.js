@@ -11,9 +11,6 @@ var regTemFactory = RegNumbers( handleStorage());
 
 var tempsource7 = document.querySelector(".userTemplate").innerHTML;
 var userTemplate7 = Handlebars.compile(tempsource7);
-// displayPlateHb.innerHTML = userTemplate7({ registrationList: [] });
-
-
 
 function clearTemError() {
     setTimeout(function () {
