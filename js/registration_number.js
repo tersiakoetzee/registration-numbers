@@ -21,7 +21,7 @@ function RegNumbers(initialRegNumbers) {
         if (!test1 && !test2 && !test3 && !test4) {
             errorMessage = "Please Enter A Valid Registration And Select A Town"
             return false;
-        }
+        }console.log(test1)
 
 
         if (isValidRegNumber) {
