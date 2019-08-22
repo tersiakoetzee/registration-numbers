@@ -44,7 +44,7 @@ describe("The registration factory", function () {
     });
 
     
-
+     //It should return  an error message when no registration number added
     it("It should return  an error message when no registration number added", function (){
 
         let regFactory = RegNumbers();
