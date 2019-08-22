@@ -52,7 +52,7 @@ describe("The registration factory", function () {
         regFactory.setTownReg("");
         
        
-
+        //git hub test
         assert.equal( "Please Enter A Valid Registration And Select A Town", regFactory.errorReg());
     });
 
