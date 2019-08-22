@@ -1,3 +1,4 @@
+  
 function RegNumbers(initialRegNumbers) {
 
     let regMap = initialRegNumbers || [];
@@ -6,16 +7,16 @@ function RegNumbers(initialRegNumbers) {
     function setTownReg(isValidRegNumber) {
 
 
-        var rex = /[A-Za-z]{2}\s[0-9]{3}\s[0-9]{3}/i;
+        var rex = /[A-Za-z]{2}\s[0-9]{3}\s[0-9]{3}$/;
         let test1 = rex.test(isValidRegNumber);
 
-        var rex = /[A-Za-z]{2}\s[0-9]{3}/i;
+        var rex = /[A-Za-z]{2}\s[0-9]{3}$/;
         let test2 = rex.test(isValidRegNumber);
 
-        var rex = /[A-Za-z]{2}\s[0-9]{4}/i;
+        var rex = /[A-Za-z]{2}\s[0-9]{4}$/;
         let test3 = rex.test(isValidRegNumber);
 
-        var rex = /[A-Za-z]{2}\s[0-9]{5}/i;
+        var rex = /[A-Za-z]{2}\s[0-9]{5}$/;
         let test4 = rex.test(isValidRegNumber);
 
         if (!test1 && !test2 && !test3 && !test4) {
