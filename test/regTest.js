@@ -19,7 +19,7 @@ describe("The registration factory", function () {
         regFactory.setTownReg("cl 45678");
         regFactory.setTownReg("cl 45678");
 
-        assert.deepEqual(["CL 45678"], regFactory.getAllRegNumbers())
+        assert.deepEqual(["CL 45678",], regFactory.getAllRegNumbers())
 
 
     });
@@ -45,17 +45,32 @@ describe("The registration factory", function () {
 
     
 
-    it("It should return me an error message when no reg number added", function (){
+    it("It should return  an error message when no registration number added", function (){
 
         let regFactory = RegNumbers();
 
-        regFactory.setTownReg();
         regFactory.setTownReg("");
         
        
 
-        assert.equal([], regFactory.setTownReg("Please Enter A Valid Registration And Select A Town"));
-    })
+        assert.equal( "Please Enter A Valid Registration And Select A Town", regFactory.errorReg());
+    });
+
+    it("It should return  an error message when no registration number added", function (){
+
+        let regFactory = RegNumbers();
+
+        regFactory.setTownReg("ca 123");
+        regFactory.setTownReg("ca 123");
+
+        
+       
+
+        assert.equal( "This Registration Had Already Been Entered", regFactory.errorReg());
+    });
+
+
+
     
 
   
